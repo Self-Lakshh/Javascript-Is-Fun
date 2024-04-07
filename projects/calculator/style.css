@@ -1,0 +1,47 @@
+body {
+  font-family: 'Outfit', sans-serif;
+  background: transparent;
+  color: #eee;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  background: rgba(255,255,255,0.03);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+  width: 280px;
+}
+input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+}
+.ops {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+button {
+  padding: 10px 15px;
+  background: #818cf8;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#calc-res {
+  font-size: 1.2rem;
+  color: #818cf8;
+  font-weight: 600;
+}

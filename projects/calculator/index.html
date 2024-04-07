@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card" id="calc-card">
+    <h3>Simple Calculator</h3>
+    <input type="number" id="calc-n1" placeholder="Num 1">
+    <input type="number" id="calc-n2" placeholder="Num 2">
+    <div class="ops">
+      <button onclick="runCalc('+')">+</button>
+      <button onclick="runCalc('-')">-</button>
+      <button onclick="runCalc('*')">*</button>
+      <button onclick="runCalc('/')">/</button>
+    </div>
+    <div id="calc-res">Result: 0</div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
