@@ -57,3 +57,10 @@ button {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(129, 140, 248, 0.4);
 }
+
+/* Refinement: Sleek input borders and inner styling */
+input:focus {
+  outline: none;
+  border-color: #a5b4fc;
+  box-shadow: 0 0 0 3px rgba(165, 180, 252, 0.25);
+}
