@@ -1,0 +1,1 @@
+// Learning: Ternary operator parameters
