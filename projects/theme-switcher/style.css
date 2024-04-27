@@ -24,3 +24,12 @@ select {
   color: white;
   border: 1px solid rgba(255,255,255,0.2);
 }
+
+/* Refinement: Center the selector card perfectly with glow borders */
+.card {
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  transition: border-color 0.3s;
+}
+.card:hover {
+  border-color: rgba(255,255,255,0.25);
+}
