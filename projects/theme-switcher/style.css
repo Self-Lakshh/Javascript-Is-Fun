@@ -35,3 +35,10 @@ select {
 }
 
 /* Continuous refinement log #1: tuning layout variables */
+
+
+/* Refinement: Beautiful select styling dropdown */
+select:focus {
+  outline: none;
+  border-color: #818cf8;
+}
