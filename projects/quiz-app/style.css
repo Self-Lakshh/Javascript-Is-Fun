@@ -30,3 +30,12 @@ body {
 }
 
 /* Continuous refinement log #46: tuning layout variables */
+
+
+/* Refinement: Smooth transitions for choices lists */
+.quiz-opt {
+  transition: all 0.25s ease-out;
+}
+.quiz-opt:hover {
+  transform: translateX(4px);
+}
