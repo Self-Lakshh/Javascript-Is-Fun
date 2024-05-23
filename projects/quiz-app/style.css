@@ -39,3 +39,9 @@ body {
 .quiz-opt:hover {
   transform: translateX(4px);
 }
+
+/* Refinement: Dynamic card height bounds and margins */
+.card h3 {
+  margin-top: 0;
+  line-height: 1.4;
+}
