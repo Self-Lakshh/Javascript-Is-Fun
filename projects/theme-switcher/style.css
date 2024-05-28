@@ -42,3 +42,5 @@ select:focus {
   outline: none;
   border-color: #818cf8;
 }
+
+/* Continuous refinement log #12: tuning layout variables */
