@@ -40,3 +40,11 @@ input {
   color: #818cf8;
   font-weight: 600;
 }
+
+/* Refinement: Adding status colors indicators on result */
+#bmi-res {
+  transition: transform 0.3s;
+}
+.card:hover #bmi-res {
+  transform: scale(1.05);
+}
