@@ -1,1 +1,10 @@
-// Learning: Control Flow: conditional statements practice
+// Day 32: Control Flow Practice - Check positive/negative/zero
+let number = -5;
+
+if (number > 0) {
+    console.log("Number is positive");
+} else if (number < 0) {
+    console.log("Number is negative");
+} else {
+    console.log("Number is zero");
+}
