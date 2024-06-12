@@ -48,3 +48,8 @@ input {
 .card:hover #bmi-res {
   transform: scale(1.05);
 }
+
+/* Refinement: Bmi card visual shadows tuning */
+.card {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
