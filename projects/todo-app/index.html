@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card" id="todo-card">
+    <h3>Todo List App</h3>
+    <div style="display:flex; gap:10px; margin-bottom:15px;">
+      <input type="text" id="todo-input" placeholder="Add custom task" style="margin:0;">
+      <button onclick="addTodo()" class="btn-add">+</button>
+    </div>
+    <ul id="todo-list"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
