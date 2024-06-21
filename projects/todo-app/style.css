@@ -51,3 +51,8 @@ input {
   color: #f87171;
   cursor: pointer;
 }
+
+/* Refinement: Dynamic button hovers and border glows */
+.btn-add:hover {
+  background: #a5b4fc;
+}
