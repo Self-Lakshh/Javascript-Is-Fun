@@ -58,3 +58,13 @@ input {
 }
 
 /* Continuous refinement log #26: tuning layout variables */
+
+
+/* Refinement: Custom scrollbar styles for tasks overflows */
+#todo-list::-webkit-scrollbar {
+  width: 5px;
+}
+#todo-list::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}
