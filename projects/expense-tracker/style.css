@@ -56,3 +56,11 @@ input {
 #exp-list li:hover {
   background: rgba(255,255,255,0.02);
 }
+
+/* Refinement: Expense lists custom scrollbar profiles */
+#exp-list::-webkit-scrollbar {
+  width: 4px;
+}
+#exp-list::-webkit-scrollbar-thumb {
+  background: rgba(129, 140, 248, 0.3);
+}
