@@ -1,0 +1,41 @@
+body {
+  font-family: 'Outfit', sans-serif;
+  background: transparent;
+  color: #eee;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  background: rgba(255,255,255,0.03);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+  width: 290px;
+  text-align: center;
+}
+input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
+  border-radius: 6px;
+}
+.btn {
+  width: 98%;
+  padding: 12px;
+  background: #818cf8;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#weather-res {
+  background: rgba(0,0,0,0.2);
+  border-radius: 8px;
+  padding: 10px;
+}
