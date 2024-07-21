@@ -64,3 +64,5 @@ input {
 #exp-list::-webkit-scrollbar-thumb {
   background: rgba(129, 140, 248, 0.3);
 }
+
+/* Continuous refinement log #27: tuning layout variables */
