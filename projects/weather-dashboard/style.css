@@ -47,3 +47,9 @@ input {
 }
 
 /* Continuous refinement log #39: tuning layout variables */
+
+
+/* Refinement: Bounded card glow parameters */
+.card {
+  border-color: rgba(129, 140, 248, 0.15);
+}
