@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="kanban" id="kanban-layout">
+    <div class="column" ondragover="allowDrop(event)" ondrop="drop(event, 'col-todo')">
+      <h4>To Do</h4>
+      <div class="cards-area" id="col-todo">
+        <div class="k-card" draggable="true" ondragstart="drag(event)" id="card-task1">Task 1: Basic Scopes</div>
+        <div class="k-card" draggable="true" ondragstart="drag(event)" id="card-task2">Task 2: closures</div>
+      </div>
+    </div>
+    <div class="column" ondragover="allowDrop(event)" ondrop="drop(event, 'col-progress')">
+      <h4>In Progress</h4>
+      <div class="cards-area" id="col-progress"></div>
+    </div>
+    <div class="column" ondragover="allowDrop(event)" ondrop="drop(event, 'col-done')">
+      <h4>Done</h4>
+      <div class="cards-area" id="col-done"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
