@@ -44,3 +44,12 @@ h4 {
 }
 
 /* Continuous refinement log #51: tuning layout variables */
+
+
+/* Refinement: Card drag cursor transitions */
+.k-card {
+  transition: background-color 0.2s;
+}
+.k-card:hover {
+  background: rgba(255,255,255,0.08);
+}
