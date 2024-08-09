@@ -45,3 +45,9 @@ input {
 
 
 /* Continuous refinement log #52: tuning layout variables */
+
+
+/* Refinement: Input placeholder centers and layouts */
+#guess-res {
+  font-weight: 600;
+}
