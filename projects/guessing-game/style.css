@@ -51,3 +51,11 @@ input {
 #guess-res {
   font-weight: 600;
 }
+
+/* Refinement: Guess submit card hover states */
+.btn {
+  transition: filter 0.2s;
+}
+.btn:hover {
+  filter: brightness(1.15);
+}
