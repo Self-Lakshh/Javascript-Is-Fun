@@ -99,3 +99,5 @@ select {
   border: 1px solid rgba(255,255,255,0.2);
   transition: all 0.4s ease;
 }
+
+/* Continuous refinement log #9: tuning layout variables */
