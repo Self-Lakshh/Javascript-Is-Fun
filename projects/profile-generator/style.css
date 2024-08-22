@@ -104,3 +104,10 @@ select {
 
 
 /* Continuous refinement log #53: tuning layout variables */
+
+
+/* Refinement: Form labels and bio textarea aesthetics */
+.form textarea:focus {
+  border-color: #818cf8;
+  outline: none;
+}
