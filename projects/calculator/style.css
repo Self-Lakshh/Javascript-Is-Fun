@@ -50,3 +50,53 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
 }
+.btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  color: #e2e8f0;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 600;
+  height: 56px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn-op {
+  background: rgba(56, 189, 248, 0.08);
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.2);
+}
+.btn-op:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+.btn-clear {
+  background: rgba(239, 68, 68, 0.08);
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.2);
+}
+.btn-clear:hover {
+  background: #ef4444;
+  color: #ffffff;
+}
+.btn-equal {
+  background: #38bdf8;
+  color: #0f172a;
+  grid-row: span 2;
+  height: 124px;
+}
+.btn-equal:hover {
+  background: #0ea5e9;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+.btn-zero {
+  grid-column: span 2;
+}
