@@ -2,18 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card" id="theme-card">
-    <h3>Theme Switcher</h3>
-    <p style="font-size:0.9rem; color:#ccc;">Select dynamic linear gradient:</p>
-    <select onchange="updateTheme(this.value)" id="theme-select">
-      <option value="linear-gradient(135deg, #1e1b4b, #581c87)">Midnight</option>
-      <option value="linear-gradient(135deg, #0f172a, #0284c7)">SkyOcean</option>
-      <option value="linear-gradient(135deg, #052e16, #15803d)">Forest</option>
-    </select>
+  <div class="theme-card">
+    <h3>Dynamic Space Theme</h3>
+    <p>Select a galactic gradient preset below to dynamically morph the background variable styles.</p>
+    <div class="theme-grid">
+      <div class="theme-option active" style="background: linear-gradient(135deg, #1e1b4b, #581c87);" onclick="setTheme('midnight', 'linear-gradient(135deg, #1e1b4b, #581c87)', this)">
+        <span>Midnight Nebula</span>
+      </div>
+      <div class="theme-option" style="background: linear-gradient(135deg, #0f172a, #0284c7);" onclick="setTheme('sky', 'linear-gradient(135deg, #0f172a, #0284c7)', this)">
+        <span>Oceanic Sky</span>
+      </div>
+      <div class="theme-option" style="background: linear-gradient(135deg, #052e16, #15803d);" onclick="setTheme('forest', 'linear-gradient(135deg, #052e16, #15803d)', this)">
+        <span>Emerald Forest</span>
+      </div>
+      <div class="theme-option" style="background: linear-gradient(135deg, #881337, #dc2626);" onclick="setTheme('crimson', 'linear-gradient(135deg, #881337, #dc2626)', this)">
+        <span>Crimson Flare</span>
+      </div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
