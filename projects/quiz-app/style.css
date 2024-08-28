@@ -1,61 +1,107 @@
 body {
   font-family: 'Outfit', sans-serif;
   background: transparent;
-  color: #eee;
+  color: #f1f5f9;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.card {
-  background: rgba(255,255,255,0.03);
-  padding: 30px;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.06);
-  width: 320px;
-  text-align: center;
+.quiz-container {
+  width: 380px;
 }
-.quiz-opt {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+#quiz-card, #result-card {
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  box-sizing: border-box;
+}
+.hidden {
+  display: none !important;
+}
+.quiz-badge {
+  background: rgba(129, 140, 248, 0.15);
+  color: #818cf8;
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.quiz-progress-bar {
   background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-  text-align: left;
+  height: 6px;
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 24px;
 }
-
-/* Continuous refinement log #46: tuning layout variables */
-
-
-/* Refinement: Smooth transitions for choices lists */
-.quiz-opt {
-  transition: all 0.25s ease-out;
+#quiz-progress {
+  background: linear-gradient(90deg, #818cf8, #a5b4fc);
+  height: 100%;
+  transition: width 0.4s ease;
 }
-.quiz-opt:hover {
-  transform: translateX(4px);
-}
-
-/* Refinement: Dynamic card height bounds and margins */
-.card h3 {
-  margin-top: 0;
+h3 {
+  margin: 0 0 20px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
   line-height: 1.4;
 }
-
-/* Continuous refinement log #35: tuning layout variables */
-
-
-/* Continuous refinement log #2: tuning layout variables */
-
-
-/* Continuous refinement log #13: tuning layout variables */
-
-
-/* Continuous refinement log #57: tuning layout variables */
-
-
-/* Continuous refinement log #24: tuning layout variables */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.option-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 14px 18px;
+  color: #e2e8f0;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: left;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.option-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateX(4px);
+}
+.option-btn:active {
+  transform: scale(0.98);
+}
+.quiz-footer {
+  margin-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 16px;
+  font-size: 0.8rem;
+  color: #64748b;
+  text-align: right;
+}
+.score-display {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #38bdf8;
+  margin: 20px 0;
+  text-align: center;
+}
+.restart-btn {
+  background: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+}
+.restart-btn:hover {
+  background: #0ea5e9;
+}
