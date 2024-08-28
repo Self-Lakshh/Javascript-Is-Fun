@@ -2,16 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card" id="quiz-card">
-    <div id="quiz-body">
-      <h3 id="quiz-question">Question Loader</h3>
-      <div id="quiz-options"></div>
+  <div class="quiz-container">
+    <div id="quiz-card">
+      <div class="quiz-header">
+        <span class="quiz-badge">Day 6 Challenge</span>
+        <div class="quiz-progress-bar">
+          <div id="quiz-progress" style="width: 0%"></div>
+        </div>
+      </div>
+      <h3 id="quiz-question">Loading Question...</h3>
+      <div id="quiz-options" class="options-container"></div>
+      <div class="quiz-footer">
+        <span id="question-tracker">Question 1 of 3</span>
+      </div>
     </div>
-    <div id="quiz-score" style="display:none; font-size:1.2rem; color:#818cf8; font-weight:600;"></div>
+    <div id="result-card" class="result-card hidden">
+      <h3>Quiz Completed!</h3>
+      <div class="score-display">
+        <span id="score-text">0/0</span>
+      </div>
+      <p id="feedback-text">Nice try!</p>
+      <button class="restart-btn" onclick="restartQuiz()">Try Again</button>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
