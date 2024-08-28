@@ -1,58 +1,69 @@
+:root {
+  --theme-bg: linear-gradient(135deg, #1e1b4b, #581c87);
+}
 body {
   font-family: 'Outfit', sans-serif;
-  background: transparent;
-  color: #eee;
+  background: var(--theme-bg);
+  color: #f1f5f9;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  transition: background 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.card {
-  padding: 30px;
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.15);
+.theme-card {
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 32px;
+  width: 380px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.45);
   text-align: center;
-  width: 280px;
-  background: linear-gradient(135deg, #1e1b4b, #581c87);
 }
-select {
-  padding: 10px;
-  width: 100%;
-  border-radius: 6px;
-  background: rgba(0,0,0,0.4);
-  color: white;
-  border: 1px solid rgba(255,255,255,0.2);
+.theme-card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #f1f5f9, #a5b4fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
-/* Refinement: Center the selector card perfectly with glow borders */
-.card {
-  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-  transition: border-color 0.3s;
+.theme-card p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 24px;
 }
-.card:hover {
-  border-color: rgba(255,255,255,0.25);
+.theme-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
-
-/* Continuous refinement log #1: tuning layout variables */
-
-
-/* Refinement: Beautiful select styling dropdown */
-select:focus {
-  outline: none;
-  border-color: #818cf8;
+.theme-option {
+  height: 80px;
+  border-radius: 16px;
+  border: 2px solid rgba(255,255,255,0.05);
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 12px;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* Continuous refinement log #12: tuning layout variables */
-
-
-/* Continuous refinement log #23: tuning layout variables */
-
-
-/* Continuous refinement log #56: tuning layout variables */
-
-
-/* Continuous refinement log #34: tuning layout variables */
-
-
-/* Continuous refinement log #45: tuning layout variables */
+.theme-option span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+.theme-option:hover {
+  transform: translateY(-4px) scale(1.03);
+  border-color: rgba(255,255,255,0.3);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.theme-option.active {
+  border-color: #a5b4fc;
+  box-shadow: 0 0 15px rgba(165, 180, 252, 0.4);
+}
