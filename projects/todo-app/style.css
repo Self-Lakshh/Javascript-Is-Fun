@@ -1,84 +1,120 @@
 body {
   font-family: 'Outfit', sans-serif;
   background: transparent;
-  color: #eee;
+  color: #f1f5f9;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.card {
-  background: rgba(255,255,255,0.03);
-  padding: 30px;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.06);
-  width: 300px;
+.todo-card {
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  width: 360px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 }
-input {
-  flex: 1;
-  padding: 10px;
-  background: rgba(0,0,0,0.2);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: white;
-  border-radius: 6px;
-}
-.btn-add {
-  padding: 10px 15px;
-  background: #818cf8;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-#todo-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  max-height: 150px;
-  overflow-y: auto;
-}
-#todo-list li {
+.todo-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  margin-bottom: 24px;
+}
+.todo-header h3 {
+  margin: 0;
+  font-weight: 600;
+}
+.todo-count {
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.input-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.input-row input {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 12px 16px;
+  color: #ffffff;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+.input-row input:focus {
+  border-color: #38bdf8;
+}
+.add-btn {
+  background: #38bdf8;
+  color: #0f172a;
+  border: none;
+  width: 46px;
+  border-radius: 14px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+.add-btn:hover {
+  background: #0ea5e9;
+  transform: scale(1.05);
+}
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 240px;
+  overflow-y: auto;
+}
+.task-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 14px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.25s ease;
+  animation: slideIn 0.3s ease-out;
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.task-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+.task-text {
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color 0.2s, text-decoration 0.2s;
+  flex: 1;
+}
+.task-item.done .task-text {
+  color: #64748b;
+  text-decoration: line-through;
 }
 .del-btn {
   background: transparent;
   border: none;
-  color: #f87171;
+  color: #64748b;
   cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.2s;
 }
-
-/* Refinement: Dynamic button hovers and border glows */
-.btn-add:hover {
-  background: #a5b4fc;
+.del-btn:hover {
+  color: #ef4444;
 }
-
-/* Continuous refinement log #26: tuning layout variables */
-
-
-/* Refinement: Custom scrollbar styles for tasks overflows */
-#todo-list::-webkit-scrollbar {
-  width: 5px;
-}
-#todo-list::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.1);
-  border-radius: 10px;
-}
-
-/* Continuous refinement log #15: tuning layout variables */
-
-
-/* Continuous refinement log #4: tuning layout variables */
-
-
-/* Continuous refinement log #48: tuning layout variables */
-
-
-/* Continuous refinement log #37: tuning layout variables */
-
-
-/* Continuous refinement log #59: tuning layout variables */
