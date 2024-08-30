@@ -2,17 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card" id="todo-card">
-    <h3>Todo List App</h3>
-    <div style="display:flex; gap:10px; margin-bottom:15px;">
-      <input type="text" id="todo-input" placeholder="Add custom task" style="margin:0;">
-      <button onclick="addTodo()" class="btn-add">+</button>
+  <div class="todo-card">
+    <div class="todo-header">
+      <h3>Todo List</h3>
+      <span class="todo-count" id="todo-count">0 tasks</span>
     </div>
-    <ul id="todo-list"></ul>
+    <div class="input-row">
+      <input type="text" id="todo-input" placeholder="What needs to be done?" onkeydown="if(event.key==='Enter') addTodo()">
+      <button class="add-btn" onclick="addTodo()">+</button>
+    </div>
+    <ul id="todo-list" class="task-list"></ul>
   </div>
   <script src="script.js"></script>
 </body>
