@@ -1,83 +1,80 @@
 body {
   font-family: 'Outfit', sans-serif;
   background: transparent;
-  color: #eee;
+  color: #f1f5f9;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.card {
-  background: rgba(255,255,255,0.03);
-  padding: 30px;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.06);
-  width: 280px;
+.exp-card {
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  width: 360px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 }
-input {
-  width: 90%;
-  padding: 10px;
-  margin-bottom: 10px;
-  background: rgba(0,0,0,0.2);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: white;
-  border-radius: 6px;
+.exp-card h3 {
+  margin-top: 0;
+  text-align: center;
+  font-weight: 600;
 }
-.btn {
-  width: 98%;
-  padding: 12px;
-  background: #818cf8;
-  border: none;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
+.balance-container {
+  text-align: center;
+  margin: 20px 0;
+}
+.bal-title {
+  font-size: 0.8rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 #exp-total {
+  margin: 4px 0 0 0;
+  font-size: 2.2rem;
   font-weight: 600;
-  color: #818cf8;
-  margin: 15px 0 10px 0;
 }
-#exp-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  max-height: 120px;
-  overflow-y: auto;
+.ledger-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
 }
-#exp-list li {
+.summary-box {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 14px;
+  text-align: center;
+}
+.summary-box span {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+.summary-box h4 {
+  margin: 4px 0 0 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.summary-box.inc h4 { color: #22c55e; }
+.summary-box.exp h4 { color: #ef4444; }
+
+.inputs-form {
   display: flex;
-  justify-content: space-between;
-  padding: 5px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
 }
-
-/* Refinement: Expense items flex row border highlights */
-#exp-list li:hover {
-  background: rgba(255,255,255,0.02);
+.inputs-form input {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 10px 14px;
+  color: #ffffff;
+  outline: none;
+  font-size: 0.9rem;
 }
-
-/* Refinement: Expense lists custom scrollbar profiles */
-#exp-list::-webkit-scrollbar {
-  width: 4px;
-}
-#exp-list::-webkit-scrollbar-thumb {
-  background: rgba(129, 140, 248, 0.3);
-}
-
-/* Continuous refinement log #27: tuning layout variables */
-
-
-/* Continuous refinement log #60: tuning layout variables */
-
-
-/* Continuous refinement log #49: tuning layout variables */
-
-
-/* Continuous refinement log #16: tuning layout variables */
-
-
-/* Continuous refinement log #38: tuning layout variables */
-
-
-/* Continuous refinement log #5: tuning layout variables */
