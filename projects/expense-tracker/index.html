@@ -2,17 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card" id="exp-card">
-    <h3>Expense Tracker</h3>
-    <input type="text" id="exp-name" placeholder="Item Name">
-    <input type="number" id="exp-amount" placeholder="Amount">
-    <button onclick="addExp()" class="btn">Add Transaction</button>
-    <div id="exp-total">Total Balance: $0</div>
-    <ul id="exp-list"></ul>
+  <div class="exp-card">
+    <h3>Expense Ledger</h3>
+    
+    <div class="balance-container">
+      <span class="bal-title">Your Balance</span>
+      <h1 id="exp-total">$0.00</h1>
+    </div>
+    
+    <div class="ledger-summary">
+      <div class="summary-box inc">
+        <span>Income</span>
+        <h4 id="summary-inc">+$0.00</h4>
+      </div>
+      <div class="summary-box exp">
+        <span>Expenses</span>
+        <h4 id="summary-exp">-$0.00</h4>
+      </div>
+    </div>
+    
+    <div class="inputs-form">
+      <input type="text" id="exp-desc" placeholder="Label (e.g. Salary, Rent)">
+      <input type="number" id="exp-amt" placeholder="Amount ($)">
+      <div class="btn-group">
+        <button class="btn btn-inc" onclick="addTx(true)">+ Income</button>
+        <button class="btn btn-exp" onclick="addTx(false)">- Expense</button>
+      </div>
+    </div>
+    
+    <ul id="exp-list" class="ledger-list"></ul>
   </div>
   <script src="script.js"></script>
 </body>
