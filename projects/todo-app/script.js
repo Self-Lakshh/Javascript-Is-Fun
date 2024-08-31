@@ -1,23 +1,53 @@
-let todos = JSON.parse(localStorage.getItem("todos")) || [];
-function saveAndRender() {
-  localStorage.setItem("todos", JSON.stringify(todos));
-  let list = document.getElementById("todo-list");
-  list.innerHTML = "";
-  todos.forEach((t, i) => {
-    let li = document.createElement("li");
-    li.innerHTML = "<span>" + t + "</span><button class='del-btn' onclick='deleteTodo(" + i + ")'>x</button>";
+let todos = JSON.parse(localStorage.getItem('todos') || '[]');
+
+function save() {
+  localStorage.setItem('todos', JSON.stringify(todos));
+  render();
+}
+
+function addTodo() {
+  const input = document.getElementById('todo-input');
+  const text = input.value.trim();
+  if (!text) return;
+  todos.push({ text, done: false });
+  input.value = '';
+  save();
+}
+
+function toggleTodo(i) {
+  todos[i].done = !todos[i].done;
+  save();
+}
+
+function delTodo(i) {
+  todos.splice(i, 1);
+  save();
+}
+
+function render() {
+  const list = document.getElementById('todo-list');
+  list.innerHTML = '';
+  
+  todos.forEach((todo, i) => {
+    const li = document.createElement('li');
+    li.className = `task-item ${todo.done ? 'done' : ''}`;
+    
+    const span = document.createElement('span');
+    span.className = 'task-text';
+    span.textContent = todo.text;
+    span.onclick = () => toggleTodo(i);
+    
+    const btn = document.createElement('button');
+    btn.className = 'del-btn';
+    btn.innerHTML = '🗑️';
+    btn.onclick = () => delTodo(i);
+    
+    li.appendChild(span);
+    li.appendChild(btn);
     list.appendChild(li);
   });
+  
+  document.getElementById('todo-count').textContent = `${todos.filter(t => !t.done).length} active`;
 }
-function addTodo() {
-  let val = document.getElementById("todo-input").value.trim();
-  if(!val) return alert("Task cannot be empty!");
-  todos.push(val);
-  document.getElementById("todo-input").value = "";
-  saveAndRender();
-}
-function deleteTodo(idx) {
-  todos.splice(idx, 1);
-  saveAndRender();
-}
-saveAndRender();
+
+document.addEventListener("DOMContentLoaded", render);
