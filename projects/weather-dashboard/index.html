@@ -2,15 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card" id="weather-card">
+  <div class="weather-card">
     <h3>Weather Dashboard</h3>
-    <input type="text" id="weather-city" placeholder="Enter City">
-    <button onclick="getWeather()" class="btn">Fetch Weather</button>
-    <div id="weather-res" style="margin-top:20px;"></div>
+    <div class="input-row">
+      <input type="text" id="weather-city" placeholder="Enter City (e.g. Tokyo, Paris)">
+      <button onclick="fetchMockWeather()">Search</button>
+    </div>
+    
+    <div class="quick-cities">
+      <span onclick="searchCity('New York')">NY</span>
+      <span onclick="searchCity('London')">LDN</span>
+      <span onclick="searchCity('Tokyo')">TKY</span>
+    </div>
+
+    <div id="weather-res" class="result-box hidden">
+      <div class="city-name" id="res-name">London, UK</div>
+      <div class="weather-icon" id="res-icon">⛅</div>
+      <h1 class="temp" id="res-temp">18°C</h1>
+      <div class="desc" id="res-desc">Partly Cloudy</div>
+      
+      <div class="weather-details">
+        <div class="detail">
+          <span>Humidity</span>
+          <strong id="res-humidity">65%</strong>
+        </div>
+        <div class="detail">
+          <span>Wind Speed</span>
+          <strong id="res-wind">12 km/h</strong>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
