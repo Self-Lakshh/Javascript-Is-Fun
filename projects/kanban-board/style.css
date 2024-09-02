@@ -1,66 +1,100 @@
 body {
   font-family: 'Outfit', sans-serif;
   background: transparent;
-  color: #eee;
+  color: #f1f5f9;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.kanban {
-  display: flex;
-  gap: 15px;
-  width: 95%;
-  height: 90%;
-}
-.column {
-  flex: 1;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.05);
-  border-radius: 12px;
-  padding: 15px;
+.kanban-wrapper {
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  width: 580px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
   display: flex;
   flex-direction: column;
 }
-h4 {
-  margin: 0 0 15px 0;
-  text-align: center;
-  color: #818cf8;
+.kanban-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.kanban-header h3 { margin: 0; }
+.add-task-row { display: flex; gap: 8px; }
+.add-task-row input {
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  padding: 8px 12px;
+  color: white;
+  outline: none;
+  font-size: 0.85rem;
+}
+.add-task-row button {
+  background: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 0 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.column {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 16px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+.column h4 {
+  margin: 0 0 16px 0;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding-bottom: 8px;
 }
 .cards-area {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  min-height: 150px;
 }
 .k-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 3px solid #38bdf8;
+  border-radius: 12px;
   padding: 12px;
-  border-radius: 6px;
+  font-size: 0.85rem;
   cursor: grab;
-}
-
-/* Continuous refinement log #51: tuning layout variables */
-
-
-/* Refinement: Card drag cursor transitions */
-.k-card {
-  transition: background-color 0.2s;
+  position: relative;
+  transition: background 0.2s, transform 0.2s;
 }
 .k-card:hover {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.06);
 }
-
-/* Continuous refinement log #18: tuning layout variables */
-
-
-/* Continuous refinement log #40: tuning layout variables */
-
-
-/* Continuous refinement log #7: tuning layout variables */
-
-
-/* Continuous refinement log #29: tuning layout variables */
+.k-card:active { cursor: grabbing; transform: scale(0.98); }
+.del-task {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  color: #64748b;
+  font-size: 0.75rem;
+}
+.del-task:hover { color: #ef4444; }
