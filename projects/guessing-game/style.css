@@ -1,69 +1,87 @@
 body {
   font-family: 'Outfit', sans-serif;
   background: transparent;
-  color: #eee;
+  color: #f1f5f9;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  transition: background 0.5s;
 }
-.card {
-  background: rgba(255,255,255,0.03);
-  padding: 30px;
-  border-radius: 16px;
+.guess-card {
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  width: 350px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  transition: all 0.3s;
+}
+.guess-card h3 { margin-top: 0; }
+.guess-card p { font-size: 0.85rem; color: #94a3b8; line-height: 1.5; margin-bottom: 24px; }
+.input-row { display: flex; gap: 12px; margin-bottom: 20px; }
+.input-row input {
+  flex: 1;
+  background: rgba(0,0,0,0.25);
   border: 1px solid rgba(255,255,255,0.06);
-  text-align: center;
-  width: 280px;
-}
-input {
-  width: 90%;
-  padding: 10px;
-  margin-bottom: 15px;
-  background: rgba(0,0,0,0.2);
-  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 10px 14px;
   color: white;
   text-align: center;
-  border-radius: 6px;
+  font-size: 1.1rem;
+  outline: none;
 }
-.btn {
-  width: 98%;
-  padding: 12px;
-  background: #818cf8;
+.input-row button {
+  background: #38bdf8;
+  color: #0f172a;
   border: none;
-  color: white;
-  border-radius: 8px;
+  padding: 0 20px;
+  border-radius: 12px;
+  font-weight: 600;
   cursor: pointer;
 }
-#guess-res {
-  margin-top: 15px;
-  font-size: 1.1rem;
-  color: #a5b4fc;
+.status-panel { margin-bottom: 20px; }
+.badge {
+  background: rgba(255,255,255,0.05);
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+  margin-bottom: 10px;
 }
-
-/* Continuous refinement log #41: tuning layout variables */
-
-
-/* Continuous refinement log #52: tuning layout variables */
-
-
-/* Refinement: Input placeholder centers and layouts */
-#guess-res {
+.message { font-size: 0.95rem; font-weight: 500; min-height: 24px; }
+.history-box {
+  background: rgba(0,0,0,0.15);
+  border-radius: 12px;
+  padding: 10px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.guesses-list { display: flex; gap: 6px; }
+.guess-tag {
+  background: rgba(255,255,255,0.08);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
   font-weight: 600;
 }
-
-/* Refinement: Guess submit card hover states */
-.btn {
-  transition: filter 0.2s;
+.reset-btn {
+  background: #22c55e;
+  color: #0f172a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
 }
-.btn:hover {
-  filter: brightness(1.15);
-}
-
-/* Continuous refinement log #8: tuning layout variables */
-
-
-/* Continuous refinement log #19: tuning layout variables */
-
-
-/* Continuous refinement log #30: tuning layout variables */
+.hidden { display: none !important; }
