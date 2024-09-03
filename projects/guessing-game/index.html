@@ -2,16 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card" id="guess-card">
-    <h3>Guess the Number</h3>
-    <p style="font-size:0.9rem; color:#94a3b8; margin:0 0 10px 0;">Guess a number 1 to 100</p>
-    <input type="number" id="guess-input" placeholder="Guess">
-    <button onclick="runGuess()" class="btn">Guess</button>
-    <div id="guess-res">Start playing!</div>
+  <div class="guess-card" id="game-card">
+    <h3>Number Guessing Game</h3>
+    <p>We've picked a secret integer between 1 and 100. Can you guess it under 8 attempts?</p>
+    
+    <div class="input-row">
+      <input type="number" id="guess-input" placeholder="50" min="1" max="100" onkeydown="if(event.key==='Enter') makeGuess()">
+      <button onclick="makeGuess()">Guess</button>
+    </div>
+    
+    <div class="status-panel">
+      <div id="attempts-badge" class="badge">Remaining: 8</div>
+      <div id="guess-res" class="message">Waiting for your first guess...</div>
+    </div>
+    
+    <div id="history-box" class="history-box hidden">
+      <span>Guesses:</span>
+      <div id="guesses-list" class="list"></div>
+    </div>
+    
+    <button id="reset-btn" class="reset-btn hidden" onclick="resetGame()">Play Again</button>
   </div>
   <script src="script.js"></script>
 </body>
