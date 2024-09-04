@@ -2,27 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="generator" id="prof-layout">
-    <div class="form">
+  <div class="creator-layout">
+    <div class="form-panel">
       <h4>Profile Studio</h4>
-      <input type="text" id="prof-name" placeholder="Name" oninput="updateProfile()">
-      <input type="text" id="prof-role" placeholder="Role" oninput="updateProfile()">
-      <textarea id="prof-bio" placeholder="Bio description" oninput="updateProfile()"></textarea>
-      <select id="prof-theme" onchange="updateProfile()">
-        <option value="linear-gradient(135deg, #1e1b4b, #581c87)">Midnight</option>
-        <option value="linear-gradient(135deg, #0f172a, #0284c7)">SkyOcean</option>
-        <option value="linear-gradient(135deg, #052e16, #15803d)">Forest</option>
-      </select>
+      <div class="field">
+        <label>Display Name</label>
+        <input type="text" id="prof-name" value="Self-Lakshh" oninput="updateProfile()">
+      </div>
+      <div class="field">
+        <label>Professional Role</label>
+        <input type="text" id="prof-role" value="Developer" oninput="updateProfile()">
+      </div>
+      <div class="field">
+        <label>Biography Summary</label>
+        <textarea id="prof-bio" oninput="updateProfile()">Vanilla JS mastery complete.</textarea>
+      </div>
+      <div class="field">
+        <label>Backdrop Accent</label>
+        <select id="prof-theme" onchange="updateProfile()">
+          <option value="linear-gradient(135deg, #1e1b4b, #581c87)">Midnight Nebula</option>
+          <option value="linear-gradient(135deg, #0f172a, #0284c7)">Oceanic Sky</option>
+          <option value="linear-gradient(135deg, #052e16, #15803d)">Emerald Forest</option>
+          <option value="linear-gradient(135deg, #881337, #dc2626)">Crimson Flare</option>
+        </select>
+      </div>
     </div>
-    <div id="profile-preview-card">
-      <div id="card-avatar">SL</div>
-      <h3 id="card-name">Self-Lakshh</h3>
-      <h4 id="card-role">Developer</h4>
-      <p id="card-bio">Vanilla JS mastery complete.</p>
+    
+    <div class="preview-panel">
+      <div id="profile-preview-card" class="preview-card" style="background: linear-gradient(135deg, #1e1b4b, #581c87);">
+        <div class="glass-overlay">
+          <div id="card-avatar" class="avatar-ring">SL</div>
+          <h3 id="card-name">Self-Lakshh</h3>
+          <h4 id="card-role">Developer</h4>
+          <p id="card-bio">Vanilla JS mastery complete.</p>
+        </div>
+      </div>
     </div>
   </div>
   <script src="script.js"></script>
