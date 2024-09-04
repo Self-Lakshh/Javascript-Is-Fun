@@ -1,115 +1,81 @@
 body {
   font-family: 'Outfit', sans-serif;
   background: transparent;
-  color: #eee;
+  color: #f1f5f9;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.generator {
-  display: flex;
-  gap: 20px;
+.creator-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  width: 580px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
   align-items: center;
 }
-.form {
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.05);
-  padding: 20px;
-  border-radius: 16px;
-  width: 200px;
+.form-panel {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
 }
-h4 {
-  margin: 0 0 5px 0;
-}
-input, select, textarea {
-  padding: 8px;
-  background: rgba(0,0,0,0.2);
-  border: 1px solid rgba(255,255,255,0.1);
+.form-panel h4 { margin: 0 0 10px 0; font-size: 1.15rem; font-weight: 600; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 0.75rem; color: #64748b; text-transform: uppercase; font-weight: 600; }
+.field input, .field textarea, .field select {
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  padding: 10px;
   color: white;
   font-size: 0.85rem;
-  border-radius: 4px;
-}
-textarea {
-  height: 50px;
-  resize: none;
-  font-family: inherit;
-}
-select {
-  background: #0b0f19;
-}
-#profile-preview-card {
-  background: linear-gradient(135deg, #1e1b4b, #581c87);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  width: 220px;
-  height: 280px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-#card-avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #818cf8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  border: 2px solid white;
-}
-#card-name {
-  margin: 0 0 5px 0;
-  font-size: 1.2rem;
-}
-#card-role {
-  margin: 0 0 10px 0;
-  color: #a5b4fc;
-  font-weight: 400;
-  font-size: 0.9rem;
-}
-#card-bio {
-  margin: 0;
-  font-size: 0.8rem;
-  color: #cbd5e1;
-  height: 60px;
-  overflow: hidden;
-}
-
-/* Continuous refinement log #31: tuning layout variables */
-
-
-/* Continuous refinement log #42: tuning layout variables */
-
-
-/* Refinement: Interactive glassmorphic styling tweaks */
-#profile-preview-card {
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
-  transition: all 0.4s ease;
-}
-
-/* Continuous refinement log #9: tuning layout variables */
-
-
-/* Continuous refinement log #53: tuning layout variables */
-
-
-/* Refinement: Form labels and bio textarea aesthetics */
-.form textarea:focus {
-  border-color: #818cf8;
   outline: none;
 }
+.field textarea { height: 60px; resize: none; }
+.field input:focus, .field textarea:focus { border-color: #38bdf8; }
 
-/* Continuous refinement log #20: tuning layout variables */
+.preview-panel { display: flex; justify-content: center; }
+.preview-card {
+  width: 200px;
+  height: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  transition: background 0.5s ease;
+}
+.glass-overlay {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.avatar-ring {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+#card-name { font-size: 1.1rem; margin: 0 0 4px 0; font-weight: 600; }
+#card-role { font-size: 0.8rem; color: #38bdf8; margin: 0 0 10px 0; text-transform: uppercase; font-weight: 600; }
+#card-bio { font-size: 0.75rem; color: #94a3b8; line-height: 1.4; margin: 0; }
