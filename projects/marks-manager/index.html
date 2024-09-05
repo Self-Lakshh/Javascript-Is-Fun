@@ -2,15 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card" id="marks-card">
-    <h3>Marks Manager</h3>
-    <input type="text" id="marks-list" placeholder="Grades e.g. 85,90,78">
-    <button onclick="runMarks()" class="btn">Evaluate</button>
-    <div id="marks-res">Average: 0</div>
+  <div class="marks-card">
+    <h3>Student Marks Manager</h3>
+    <div class="input-row">
+      <input type="text" id="marks-input" placeholder="Enter grades (e.g. 85, 90, 78)">
+      <button onclick="evaluateGrades()">Analyze</button>
+    </div>
+    
+    <div id="results-panel" class="results-panel hidden">
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span>Average</span>
+          <h2 id="grade-avg">0.0</h2>
+        </div>
+        <div class="stat-box">
+          <span>Grade</span>
+          <h2 id="grade-letter" style="color: #38bdf8;">A</h2>
+        </div>
+      </div>
+      
+      <div class="details-list">
+        <div class="detail-row">
+          <span>Total Scores</span>
+          <strong id="grade-total">0</strong>
+        </div>
+        <div class="detail-row">
+          <span>Highest Score</span>
+          <strong id="grade-highest">0</strong>
+        </div>
+        <div class="detail-row">
+          <span>Lowest Score</span>
+          <strong id="grade-lowest">0</strong>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
