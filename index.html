@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-IS-FUN Dashboard - 11 Landmark Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">Self-Lakshh.js</div>
+    <ul class="menu" id="project-menu">
+      <li onclick="loadProject('calculator')" id="item-1">Simple Calculator</li>
+      <li onclick="loadProject('theme-switcher')" id="item-2">Theme Switcher</li>
+      <li onclick="loadProject('quiz-app')" id="item-3">Interactive Quiz</li>
+      <li onclick="loadProject('bmi-calculator')" id="item-4">BMI Calculator</li>
+      <li onclick="loadProject('todo-app')" id="item-5">Todo List App</li>
+      <li onclick="loadProject('expense-tracker')" id="item-6">Expense Tracker</li>
+      <li onclick="loadProject('weather-dashboard')" id="item-7">Weather Dashboard</li>
+      <li onclick="loadProject('kanban-board')" id="item-8">Kanban Board</li>
+      <li onclick="loadProject('guessing-game')" id="item-9">Number Guessing</li>
+      <li onclick="loadProject('profile-generator')" id="item-10">Profile Generator</li>
+      <li onclick="loadProject('marks-manager')" id="item-11">Marks Manager</li>
+    </ul>
+  </div>
+  <div class="main-viewport">
+    <div class="preview-header">
+      <h1 id="view-title">Simple Calculator</h1>
+      <p id="view-desc">Sleek mathematical evaluation card.</p>
+    </div>
+    <div class="app-sandbox">
+      <iframe id="sandbox-iframe" src="" style="width: 100%; height: 100%; border: none; border-radius: 16px; background: transparent;"></iframe>
+    </div>
+  </div>
+  <script>
+    const projects = {
+      'calculator': { title: "Simple Calculator", desc: "Sleek mathematical evaluation card.", id: 1 },
+      'theme-switcher': { title: "Theme Switcher", desc: "CSS Custom variables dynamic linear-gradients update.", id: 2 },
+      'quiz-app': { title: "Interactive Quiz App", desc: "Multiple choice card with scores outputs.", id: 3 },
+      'bmi-calculator': { title: "BMI Calculator", desc: "Metric index computations and categorizations.", id: 4 },
+      'todo-app': { title: "Collaborative Todo List", desc: "Dynamic task tracking local storage persist.", id: 5 },
+      'expense-tracker': { title: "Personal Expense Tracker", desc: "Dynamic transaction collection aggregates.", id: 6 },
+      'weather-dashboard': { title: "Weather Dashboard", desc: "Async Mock API weather widgets.", id: 7 },
+      'kanban-board': { title: "Kanban Board", desc: "HTML5 Drag-and-drop columns.", id: 8 },
+      'guessing-game': { title: "Number Guessing Game", desc: "Random number hot/cold feedback loops.", id: 9 },
+      'profile-generator': { title: "Profile Card Generator", desc: "Dynamic glassmorphic cards generator.", id: 10 },
+      'marks-manager': { title: "Student Marks Manager", desc: "Grade computation average structures.", id: 11 }
+    };
+
+    function loadProject(name) {
+      const p = projects[name];
+      if (!p) return;
+      document.getElementById("view-title").textContent = p.title;
+      document.getElementById("view-desc").textContent = p.desc;
+      document.getElementById("sandbox-iframe").src = "projects/" + name + "/index.html";
+      
+      document.querySelectorAll("#project-menu li").forEach(el => el.classList.remove("active"));
+      document.getElementById("item-" + p.id).classList.add("active");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      loadProject('calculator');
+    });
+  </script>
+</body>
+</html>

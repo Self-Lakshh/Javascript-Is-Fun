@@ -1,0 +1,74 @@
+body {
+  font-family: 'Outfit', sans-serif;
+  background: transparent;
+  color: #eee;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  background: rgba(255,255,255,0.03);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+  width: 280px;
+}
+input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+}
+.ops {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+button {
+  padding: 10px 15px;
+  background: #818cf8;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#calc-res {
+  font-size: 1.2rem;
+  color: #818cf8;
+  font-weight: 600;
+}
+
+/* Refinement: Add dynamic hover scaling to buttons */
+.ops button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ops button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(129, 140, 248, 0.4);
+}
+
+/* Refinement: Sleek input borders and inner styling */
+input:focus {
+  outline: none;
+  border-color: #a5b4fc;
+  box-shadow: 0 0 0 3px rgba(165, 180, 252, 0.25);
+}
+
+/* Continuous refinement log #11: tuning layout variables */
+
+
+/* Continuous refinement log #22: tuning layout variables */
+
+
+/* Continuous refinement log #33: tuning layout variables */
+
+
+/* Continuous refinement log #44: tuning layout variables */

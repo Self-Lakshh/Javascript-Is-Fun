@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="generator" id="prof-layout">
+    <div class="form">
+      <h4>Profile Studio</h4>
+      <input type="text" id="prof-name" placeholder="Name" oninput="updateProfile()">
+      <input type="text" id="prof-role" placeholder="Role" oninput="updateProfile()">
+      <textarea id="prof-bio" placeholder="Bio description" oninput="updateProfile()"></textarea>
+      <select id="prof-theme" onchange="updateProfile()">
+        <option value="linear-gradient(135deg, #1e1b4b, #581c87)">Midnight</option>
+        <option value="linear-gradient(135deg, #0f172a, #0284c7)">SkyOcean</option>
+        <option value="linear-gradient(135deg, #052e16, #15803d)">Forest</option>
+      </select>
+    </div>
+    <div id="profile-preview-card">
+      <div id="card-avatar">SL</div>
+      <h3 id="card-name">Self-Lakshh</h3>
+      <h4 id="card-role">Developer</h4>
+      <p id="card-bio">Vanilla JS mastery complete.</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

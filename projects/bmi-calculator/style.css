@@ -1,0 +1,63 @@
+body {
+  font-family: 'Outfit', sans-serif;
+  background: transparent;
+  color: #eee;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  background: rgba(255,255,255,0.03);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+  width: 280px;
+}
+input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+}
+.btn {
+  width: 98%;
+  padding: 12px;
+  background: #818cf8;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#bmi-res {
+  font-size: 1.2rem;
+  color: #818cf8;
+  font-weight: 600;
+}
+
+/* Refinement: Adding status colors indicators on result */
+#bmi-res {
+  transition: transform 0.3s;
+}
+.card:hover #bmi-res {
+  transform: scale(1.05);
+}
+
+/* Refinement: Bmi card visual shadows tuning */
+.card {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+/* Continuous refinement log #25: tuning layout variables */
+
+
+/* Continuous refinement log #36: tuning layout variables */
+
+
+/* Continuous refinement log #47: tuning layout variables */

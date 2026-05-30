@@ -1,0 +1,83 @@
+body {
+  font-family: 'Outfit', sans-serif;
+  background: #090d16;
+  color: #f1f5f9;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+.sidebar {
+  width: 280px;
+  background: rgba(255, 255, 255, 0.01);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #a5b4fc, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.menu li {
+  padding: 12px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #94a3b8;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+.menu li:hover {
+  background: rgba(255,255,255,0.03);
+  color: #f1f5f9;
+}
+.menu li.active {
+  background: rgba(129, 140, 248, 0.1);
+  border-color: rgba(129, 140, 248, 0.3);
+  color: #a5b4fc;
+  font-weight: 600;
+}
+.main-viewport {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.preview-header {
+  margin-bottom: 30px;
+}
+.preview-header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+.preview-header p {
+  color: #94a3b8;
+  margin: 5px 0 0 0;
+}
+.app-sandbox {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  position: relative;
+}

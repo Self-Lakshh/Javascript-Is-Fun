@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card" id="theme-card">
+    <h3>Theme Switcher</h3>
+    <p style="font-size:0.9rem; color:#ccc;">Select dynamic linear gradient:</p>
+    <select onchange="updateTheme(this.value)" id="theme-select">
+      <option value="linear-gradient(135deg, #1e1b4b, #581c87)">Midnight</option>
+      <option value="linear-gradient(135deg, #0f172a, #0284c7)">SkyOcean</option>
+      <option value="linear-gradient(135deg, #052e16, #15803d)">Forest</option>
+    </select>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
